@@ -1,0 +1,25 @@
+function function_B {
+  echo "Function B."
+}
+function function_A {
+  echo "$1"
+}
+function adder {
+  echo "$(($1 + $2))"
+}
+
+# FUNCTION CALLS
+# Pass parameter to function A
+function_A "Function A."     # Function A.
+function_B                   # Function B.
+# Pass two parameters to function adder
+adder 12 56                  # 68
+
+$0 - The filename of the current script.|
+$n - The Nth argument passed to script was invoked or function was called.|
+$# - The number of argument passed to script or function.|
+$@ - All arguments passed to script or function.|
+$* - All arguments passed to script or function.|
+$? - The exit status of the last command executed.|
+$$ - The process ID of the current shell. For shell scripts, this is the process ID under which they are executing.|
+$! - The process number of the last background command. |
